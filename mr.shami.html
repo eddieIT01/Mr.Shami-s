@@ -4,96 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. Shami's Restaurant</title>
-    <link rel="stylesheet" href="mr.shami.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to Mr. Shami's Restaurant</h1>
-        <nav>
-            <a href="#shawarma">Shawarma Menu</a>
-            <a href="#tawook">Tawook Menu</a>
-            <a href="#rice">Rice Menu</a>
-        </nav>
+        <div class="container">
+            <h1>Mr. Shami's Restaurant</h1>
+            <nav>
+                <ul>
+                    <li><a href="#shawarma">Shawarma Menu</a></li>
+                    <li><a href="#tawook">Tawook Menu</a></li>
+                    <li><a href="#rice">Rice Menu</a></li>
+                    <li><a href="#calculator">Order Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="shawarma">
-            <h2>Shawarma Menu</h2>
-            <div class="menu-section">
-                <div class="menu-item">
-                    <div class="menu-title">Chicken Shawarma</div>
-                    <div class="price">300 LBP - شاورما دجاج</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Small Chicken Shawarma</div>
-                    <div class="price">200 LBP - شاورما دجاج صغيرة</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Chicken Shawarma Extra Cheese</div>
-                    <div class="price">400 LBP - شاورما دجاج اكسترا جبنة</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Pizza Shawarma</div>
-                    <div class="price">500 LBP - بيتزا شاورما</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Double Shawarma</div>
-                    <div class="price">400 LBP - دوبل شاورما</div>
-                </div>
+        <section class="intro">
+            <h2>Welcome to Mr. Shami's Restaurant</h2>
+            <p>Indulge in authentic flavors and delicious dishes crafted with love.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+                <img src="image1.jpg" alt="Restaurant Interior">
+                <img src="image2.jpg" alt="Delicious Dishes">
+                <img src="image3.jpg" alt="Cozy Seating">
+                <img src="image4.jpg" alt="Food Presentation">
             </div>
         </section>
 
+        <section id="shawarma">
+            <h2>Shawarma Menu</h2>
+            <ul class="menu">
+                <li>
+                    <span class="english">Chicken Shawarma</span>
+                    <span class="arabic">شاورما دجاج - 300 LBP</span>
+                    <button onclick="addToCart(300)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Small Chicken Shawarma</span>
+                    <span class="arabic">شاورما دجاج صغيرة - 200 LBP</span>
+                    <button onclick="addToCart(200)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Chicken Shawarma Extra Cheese</span>
+                    <span class="arabic">شاورما دجاج اكسترا جبنة - 400 LBP</span>
+                    <button onclick="addToCart(400)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Pizza Shawarma</span>
+                    <span class="arabic">بيتزا شاورما - 500 LBP</span>
+                    <button onclick="addToCart(500)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Double Shawarma</span>
+                    <span class="arabic">دوبل شاورما - 400 LBP</span>
+                    <button onclick="addToCart(400)">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+        
         <section id="tawook">
             <h2>Tawook Menu</h2>
-            <div class="menu-section">
-                <div class="menu-item">
-                    <div class="menu-title">Tawook on Coal</div>
-                    <div class="price">400 LBP - طاووق على الفحم</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Tawook on Gas</div>
-                    <div class="price">300 LBP - طاووق على الغاز</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Sawdat Chicken</div>
-                    <div class="price">250 LBP - سودة دجاج</div>
-                </div>
-            </div>
+            <ul class="menu">
+                <li>
+                    <span class="english">Tawook on Coal</span>
+                    <span class="arabic">طاووق على الفحم - 400 LBP</span>
+                    <button onclick="addToCart(400)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Tawook on Gas</span>
+                    <span class="arabic">طاووق على الغاز - 300 LBP</span>
+                    <button onclick="addToCart(300)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Sawdat Chicken</span>
+                    <span class="arabic">سودة دجاج - 250 LBP</span>
+                    <button onclick="addToCart(250)">Add to Cart</button>
+                </li>
+            </ul>
         </section>
 
         <section id="rice">
             <h2>Rice Menu</h2>
-            <div class="menu-section">
-                <div class="menu-item">
-                    <div class="menu-title">Small Rice</div>
-                    <div class="price">100 LBP - أرز صغير</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Medium Rice</div>
-                    <div class="price">300 LBP - أرز وسط</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Large Rice</div>
-                    <div class="price">400 LBP - أرز كبير</div>
-                </div>
-            </div>
+            <ul class="menu">
+                <li>
+                    <span class="english">Small Rice</span>
+                    <span class="arabic">أرز صغير - 100 LBP</span>
+                    <button onclick="addToCart(100)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Medium Rice</span>
+                    <span class="arabic">أرز وسط - 300 LBP</span>
+                    <button onclick="addToCart(300)">Add to Cart</button>
+                </li>
+                <li>
+                    <span class="english">Large Rice</span>
+                    <span class="arabic">أرز كبير - 400 LBP</span>
+                    <button onclick="addToCart(400)">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="calculator">
+            <h2>Order Calculator</h2>
+            <p>Total Cost: <span id="totalCost">0</span> LBP</p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Mr. Shami's Restaurant, we are dedicated to serving authentic, delicious meals made with the finest ingredients. Experience the rich flavors of our traditional dishes in a warm and inviting atmosphere.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Address: Your Address Here</p>
+            <p>Phone: Your Phone Number Here</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Mr. Shami's Restaurant. All Rights Reserved.</p>
+        <p>&copy; 2025 Mr. Shami's Restaurant. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scrolling effect for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        let total = 0;
+
+        function addToCart(price) {
+            total += price;
+            document.getElementById('totalCost').innerText = total;
+        }
+
+        function checkout() {
+            alert(`Your total cost is ${total} LBP. Thank you for your order!`);
+            total = 0;  // Reset total after checkout
+            document.getElementById('totalCost').innerText = total;
+        }
     </script>
 </body>
 </html>
